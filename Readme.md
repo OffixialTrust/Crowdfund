@@ -1,6 +1,6 @@
 # Weekly Project – Crowdfunding product page
 
-This is my submission for the final weekly project of the Techy Jaunt Advanced Frontend cohort. The goal of this task was to build a frontend application using **React**. However, due to time constraints and a tight schedule, and resumption preparations, the current version is written in **vanilla JavaScript** with plans to **refactor it to React** soon and make it responsive (it is only on mobile view for now).
+This is my submission for the final weekly project of the TechyJaunt Advanced Frontend cohort. The goal of this task was to build a frontend application using **React**. However, due to time constraints and a tight schedule, and resumption preparations, the current version is written in **vanilla JavaScript** with plans to **refactor it to React** soon and make it responsive (it is only on mobile view for now).
 
 ### Features (Planned / In Progress)
 

@@ -1,7 +1,7 @@
 const qS = (query) => document.querySelector(query);
 const qSA = (query) => document.querySelectorAll(query);
 
-setTimeout(() => alert("Please accept my apologies, as this app is stll under construction!"), 1000);
+setTimeout(() => alert("Please accept my apologies, as this app is still under construction!"), 1000);
 
 // displaying and hiding menu and overlay elements
 const openMenu = qS("#open-menu");
