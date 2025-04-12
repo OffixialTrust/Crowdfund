@@ -1,0 +1,14 @@
+@use "./boilerplate/variables" as *;
+@use "./boilerplate/mixins" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include box($height: 100vh, $margin: 0 0 $pd-inline);
+  font-size: 16px;
+  position: relative;
+  background-color: #f5f5f5;
+  font-family: 'Commissioner', sans-serif;
+}

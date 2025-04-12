@@ -1,0 +1,44 @@
+@use "./Scss/boilerplate/mixins" as *;
+@use "./Scss/boilerplate/variables" as *;
+@use "./Scss/layout";
+@use "./Scss/header";
+@use "./Scss/main";
+@use"./Scss/modal-section";
+@use "./Scss/boilerplate/colors-and-fonts";
+
+#gradient-overlay {
+  @include box($width: 100vw, $height: 100vh);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+  display: none;
+  z-index: 10;
+}
+
+#full-overlay {
+  z-index: 12;
+  @extend #gradient-overlay;
+  background-image: none; 
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#confirmation-box {
+  display: none;
+  z-index: 20;
+  @include box($padding: 20px, $width: 90%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  & > * {
+    margin: 16px auto;
+  }
+  p {
+    margin: 20px auto;
+  }
+  #got-it-button {
+    padding: 16px 28px;
+  }
+}

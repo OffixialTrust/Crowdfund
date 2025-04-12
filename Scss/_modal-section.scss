@@ -1,0 +1,74 @@
+@use "./boilerplate/variables" as *;
+@use "./boilerplate/mixins" as *;
+
+#modal-section {
+   display: none;
+   @include box($padding: $pd-inline, $width: 90%, $height: 90vh);
+   position: absolute;
+   top: 60%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 20;
+   h4 {
+     display: inline-block;
+     margin: 0;
+   }
+   .pledge:not(:last-child) {
+   cursor: pointer;
+     padding: 0;
+   }
+   .padding-wrap {
+     padding: 20px 20px 0;
+   }
+}
+
+#close-modal {
+  cursor: pointer;
+}
+
+.selection-wrapper {
+  width: auto;
+  display: grid;
+  justify-items: start;
+  grid-template-columns: 1fr 6fr;
+ // gap: 2px;
+}
+
+.selection-icon {
+  display: inline-block;
+  width: 20px; height: 20px;
+  border: 1px solid $grey;
+  border-radius: 50%;
+  margin-right: 4px;
+  vertical-align: middle;
+  align-self: center;
+  grid-row: 1 / 3;
+}
+
+form.pledge-input-details {
+  @include box($padding: 20px);
+  border-top: 0.6px solid $grey;
+  text-align: center;
+  display: none;
+}
+
+form .wrapper {
+  @include box($margin: 30px 0 0);
+  display: flex;
+  justify-content: space-between;
+  .button {
+    padding: 16px 28px;
+  }
+  input {
+    border: 0.6px solid $grey;
+    background-color: transparent;
+    border-radius: $big-bd-radius;
+    padding: 16px 20px;
+    width: 100px;
+    font-weight: 700;
+    text-align: center;
+    &:focus {
+    outline: 1px solid $dark-cyan;
+    }
+  }
+}

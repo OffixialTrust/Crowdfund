@@ -1,0 +1,75 @@
+@use "./boilerplate/variables" as *;
+@use "./boilerplate/mixins" as *;
+@use "sass:math";
+
+main {
+  // display: none;
+  @include box($padding: 0 $pd-inline);
+  position: absolute;
+  top: 240px;
+  z-index: 1;
+}
+
+#intro {
+  @include box($padding: 40px 20px);
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  & > img {
+    position: absolute;
+    top: -28px;
+    left: calc((100% - 56px) / 2);
+  }
+  
+  #wrapper {
+    @include box($margin: 25px 0 0);
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 10px;
+    // justify-content: space-around;
+    button {
+    padding: 16px 35px;
+    }
+    
+    #bookmark {
+      cursor: pointer;
+    }
+  }
+  
+}
+
+#discover {
+  @include box($padding: 20px, $margin: $pd-inline 0);
+  text-align: center;
+  line-height: 0.5;
+  #progress-bar {
+    width: 100%;
+  }
+}
+
+.pledges-container {
+  @include box($padding: 20px);
+  .pledge {
+    @include box($padding: 20px, $margin: 20px 0);
+    border: 0.3px solid $grey;
+    border-radius: $small-bd-radius;
+    &:last-child {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    h4 {
+      margin: 0;
+     // line-height: 1;
+    }
+    .green-text {
+      margin: 10px 0 12px;
+      font-weight: 500;
+    }
+    .reward-button {
+      padding: 16px 24px;
+    }
+  }
+}

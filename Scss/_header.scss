@@ -1,0 +1,62 @@
+@use "./boilerplate/variables" as *;
+@use "./boilerplate/mixins" as *;
+
+header {
+  @include box($padding: $pd-inline);
+  height: 300px;
+  background-image: url('./images/image-hero-mobile.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+  
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include box;
+  
+  h2 {
+    color: $white;
+    margin: 0;
+    z-index: 10;
+  }
+}
+
+.menu-button {
+  @include box($width: auto, $height: 15px);
+  cursor: pointer;
+  z-index: 10;
+  #close-menu {
+  display: none;
+  }
+}
+
+#nav-list {
+  @include box($margin: 60px 0 0);
+  background: $white;
+  display: none;
+  z-index: 20;
+  list-style: none;
+  border-radius: $small-bd-radius;
+  z-index: 5000;
+  a {
+    display: block;
+    cursor: pointer;
+    color: $black;
+    text-decoration: none;
+    padding: 22px 20px;
+    font-weight: 525;
+    font-size: 17px;
+    // z-index: 8;
+  }
+  /*
+  li {
+    z-index: 8;
+  }
+  */
+  li:not(:last-child) {
+      border-bottom: 0.5px solid $grey;
+    }
+}
+
+
