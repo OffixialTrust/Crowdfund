@@ -62,6 +62,7 @@ for (let i = 0; i < 3; i++) {
 for (let i = 0; i < 2; i++) {
   rewardButton[i].addEventListener("click", () => {
     modal.style.display = "block";
+    main.style.display = "none";
     indicateSelection(i + 1);
   });
 }
@@ -87,3 +88,12 @@ gotItButton.addEventListener("click", () => {
     main.style.display = "block";
     fullOverlay.style.display = "none";
 });
+
+const forms = Array.from(qSA("form"));
+
+forms.forEach(el => {
+  el.addEventListener("submit", event => event.preventDefault());
+});
+
+
+
